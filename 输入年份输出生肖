@@ -1,0 +1,55 @@
+#include<stdio.h>
+int main(){
+    int year;
+    scanf("%d", &year);
+
+  char arr[12][20]={ "rat", "ox", "tiger", "rabbit", "dragon", "snake", "horse", 
+                 "sheep", "monkey", "rooster", "dog", "pig"};
+
+    if(year == 1900){
+        printf("rat");
+        return 0;
+    }
+    if(year > 1900){
+        year = year - 1900;
+        year = year % 12;
+        printf("%s", arr[year]);
+        return 0;
+    }
+    if(year < 1900){
+        year = (year - 1900) * -1;
+        year = year % 12;
+        year = 12 - year;
+        printf("%s", arr[year]);
+    }
+
+    return 0;
+}
+
+
+方法二
+#include<stdio.h>
+int main()
+{
+	int year,t;
+	printf("输入年份：\n");
+	scanf("%d",&year);
+	t=year%12;
+	switch(t)
+	{
+	case 0:printf("猴\n");break;
+	case 1:printf("鸡\n");break;
+	case 2:printf("狗\n");break;
+	case 3:printf("猪\n");break;
+	case 4:printf("鼠\n");break;
+	case 5:printf("牛\n");break;
+	case 6:printf("虎\n");break;
+	case 7:printf("兔\n");break;
+	case 8:printf("龙\n");break;
+	case 9:printf("蛇\n");break;
+	case 10:printf("马\n");break;
+	case 11:printf("羊\n");break;
+
+	}
+    return 0;
+}
