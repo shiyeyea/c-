@@ -66,3 +66,18 @@ int main()
 
 	return 0;
 }
+n到1000的累加
+# include<stdio.h>
+int main()
+{
+	int i,sum=0;
+	printf("输入一个数:");
+	scanf("%d",&i);
+	while(i<=1000)
+	{
+		sum=sum+i;
+		i++;
+	}
+	printf("这个数到1000的累和：%d\n",sum);
+	return 0;
+}
