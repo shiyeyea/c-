@@ -121,3 +121,19 @@ int main()
 	}
 	return 0;
 }
+两个数的公约数
+# include<stdio.h>
+int main()
+{
+	int a=24;
+	int b=18;
+	int r=0;
+	scanf("%d%d",&a,&b);
+	while(r=a%b)
+	{
+		a=b;
+		b=r;
+	}//辗转相除法
+	printf("%d\n",b);
+	return 0;
+}
