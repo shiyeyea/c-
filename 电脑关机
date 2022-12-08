@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int main()
+{
+	char iqut[20]={0};
+	//showdown-s-t60   60秒后关机
+	//system("");  执行系统命令
+	system("shutdown -s -t 60");
+again:
+	printf("请注意，你的电脑将在一分钟内关机\n如果输入：“我是猪”。则取消关机\n");
+	scanf("%s",iqut);
+	if(strcmp(iqut,"我是猪")==0)//比较两个字符串-strcmp()  头文件#include<string.h>
+	{
+		system("shutdown -a");
+	}
+	else
+	{
+		goto again;
+	}
+
+	return 0;
+}
