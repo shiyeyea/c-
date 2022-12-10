@@ -1,0 +1,23 @@
+strcpy函数
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char arr1[]="bit";
+	char arr2[20]="#########";
+	strcpy(arr2,arr1);
+	printf("%s\n",arr2);//也拷贝了\0
+	//strcpy -string copy -字符串拷贝
+	//strlen -string length -字符串长度有关
+	return 0;
+}
+memset函数
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char arr[]="hello world";
+	memset(arr,'*',5);//menset内存设置-头文件<string.h>  '*'将arr设置为*，5  个数5个
+	printf("%s\n",arr);
+	return 0;
+}
