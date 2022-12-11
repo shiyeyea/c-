@@ -20,3 +20,23 @@ int main()
 
 	return 0;
 }
+利用取址来换位
+#include<stdio.h>
+#include<string.h>
+//函数定义（利用取址来换位）
+void swap2(int *pa,int *pb)
+{
+	int tmp=0;
+	tmp=*pa;
+	*pa=*pb;
+	*pb=tmp;
+}
+int main()
+{
+	int a=10;
+	int b=20;
+	printf("a=%d,b=%d\n",a,b);
+	swap2(&a,&b);//取址打印
+	printf("a=%d,b=%d",a,b);
+	return 0;
+}
