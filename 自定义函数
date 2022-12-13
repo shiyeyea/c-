@@ -134,3 +134,20 @@ int main()
 
 	return 0;
 }
+数字一个个加
+#include<stdio.h>
+#include<string.h>
+//函数定义  重点：（*p）
+void add(int* p)
+{
+	(*p)++;//不能*p++，需要加（）
+}
+int main()
+{
+	int num=0;
+	add(&num);
+	printf("%d\n",num);
+	add(&num);
+	printf("%d\n",num);
+	return 0;
+}
