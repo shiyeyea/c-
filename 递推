@@ -1,10 +1,10 @@
 数字个个打印
 #include<stdio.h>
-//递推（大事化小）
+//递归（大事化小）
 //个个打印位数
 int print(int x)
 {
-	if(x>9)
+        if（x>9）//结束递归
 	{
 		print(x/10);
 	}
