@@ -1,0 +1,47 @@
+数字个个打印
+#include<stdio.h>
+//递归（大事化小）
+//个个打印位数
+int print(int x)
+{
+        if（x>9）//结束递归
+	{
+		print(x/10);
+	}
+	printf("%d ",x%10);
+}
+int main()
+{
+	unsigned int t;
+	scanf("%d",&t);
+	print(t);
+	return 0;
+}
+不定义数
+#include<stdio.h>
+#include<string.h>
+//递归的方法
+//把大事化小
+//my_strlee("bit");
+//1+my_strlee("it");
+//1+1+my_strlee("t");
+//1+1+1+my_strlee("");
+//1+1+1+0
+//3
+int my_strlee(char* str)
+{
+	if(*str !='\0')
+		return 1+my_strlee(str+1);
+	else
+		return 0;
+}
+
+ int main()
+ {
+	 char arr[]="bit";
+	 //int x=strlen(arr);//strlen字符串长度
+	 //printf("%d",x);
+	 int x=my_strlee(arr);//arr	是数组，数组传参是传第一个元素地址
+	 printf("x=%d\n",x);
+	 return 0;
+ }
