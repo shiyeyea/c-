@@ -1,0 +1,19 @@
+数字个个打印
+#include<stdio.h>
+//递推（大事化小）
+//个个打印位数
+int print(int x)
+{
+	if(x>9)
+	{
+		print(x/10);
+	}
+	printf("%d ",x%10);
+}
+int main()
+{
+	unsigned int t;
+	scanf("%d",&t);
+	print(t);
+	return 0;
+}
