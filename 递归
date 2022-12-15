@@ -65,3 +65,30 @@ int main()
 	printf("%d",y);
 	return 0;
 }
+循环找斐波那契数
+#include<stdio.h>
+#include<string.h>
+int my_liu(int x)
+{
+	int a=1;
+	int b=1;
+	int c=1;
+	while(x>2)
+	{
+		c=a+b;
+		a=b;
+		b=c;
+		x--;
+	}
+	return c;
+
+}//递归反应速度太慢了
+int main()
+{
+	int a;
+	int y;
+	scanf("%d",&a);
+	y = my_liu(a);
+	printf("%d",y);
+	return 0;
+}
