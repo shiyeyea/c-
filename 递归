@@ -45,3 +45,23 @@ int my_strlee(char* str)
 	 printf("x=%d\n",x);
 	 return 0;
  }
+数的阶乘
+#include<stdio.h>
+#include<string.h>
+int my_liu(int x)
+{
+	if(x<=1)
+		return 1;
+	else
+		return x*my_liu(x-1);
+}
+int main()
+{
+	int a;
+	int y;
+	scanf("%d",&a);
+	//TDD 测试驱动开发
+	y = my_liu(a);
+	printf("%d",y);
+	return 0;
+}
