@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main()
+{
+	int a=5,b=10;
+	printf("a=%d,b=%d",a,b);
+	a=a+b;//a和b的和
+	b=a-b;//b得到了原来的a
+	a=a-b;//a得到了原来的b
+	printf("a=%d,b=%d",a,b);
+	return 0;
+}
