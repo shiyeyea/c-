@@ -1,8 +1,26 @@
+无bug
 #include<stdio.h>
 int main()
 {
-	int a=5,b=10;
+	int a=5,b=6;
 	printf("a=%d,b=%d",a,b);
+	//^按（二进制）位异或
+	//相同为0，相异为1
+	a=a^b;
+	b=a^b;
+	a=a^b;
+	printf("a=%d,b=%d",a,b);
+	return 0;
+}
+有bug
+#include<stdio.h>
+#include<limits.h>
+int main()
+{
+	int a=5,b=10;
+	//INT_MAX;2147483647（头文件#include<limits.h>）找出类型的最大值
+	printf("a=%d,b=%d",a,b);
+	//溢出问题
 	a=a+b;//a和b的和
 	b=a-b;//b得到了原来的a
 	a=a-b;//a得到了原来的b
