@@ -1,0 +1,4 @@
+#include<stdio.h>
+int main() {
+	int* p = NULL;//空指针赋值
+	return 0;
