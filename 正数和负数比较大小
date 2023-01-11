@@ -1,0 +1,13 @@
+#include<stdio.h>
+int i;//全局变量——不初始化——默认是0
+int main() {
+	i--;
+	if (i > sizeof(i))//sizeof()——计算变量/类型所占内存的大小  >=0 无符号数（-1变二进制时它的1不表示为负号）
+	{
+		printf(">\n");
+	}
+	else {
+		printf("<\n");
+	}
+	return 0;
+}
