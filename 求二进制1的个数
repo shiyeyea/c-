@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+int counit_one(unsigned int n)//解决了负数
+{
+	int cout = 0;
+	while (n) {
+		if (n % 2 == 1) {
+			cout++;
+		}
+		n = n / 2;
+	}
+	return cout;
+}
+//二进制%2/2  八进制%8/8  十进制%10/10  十六进制%16/16
+int main() {
+	int a = 0;
+	scanf_s("%d", &a);
+	int count = counit_one(a);
+	printf("count=%d", count);
+	return 0;
+}
