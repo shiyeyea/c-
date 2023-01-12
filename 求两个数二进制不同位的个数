@@ -1,0 +1,17 @@
+#include<stdio.h>
+int count_one(int x, int y) {
+	int tmp = x ^ y;
+	int cout = 0;
+	while (tmp) {
+		tmp = tmp &(tmp - 1);
+		cout++;
+	}
+	return cout;
+}
+int main() {
+	int n, m;
+	scanf_s("%d%d", &n, &m);
+	int cout=count_one(n, m);
+	printf("%d", cout);
+	return 0;
+}
