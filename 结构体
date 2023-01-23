@@ -1,0 +1,18 @@
+#include<stdio.h>
+//对类型重命名
+typedef struct stu {
+	char name[20];
+}syy;//syy就是重命名
+
+//struct 结构体关键字  Stu -结构体标签  struct Stu -结构体类型
+//struct sss
+//{
+//	//成员变量
+//	char name[20];
+//}s1,s2,s3;//s1,s2,s3 是三个全局的结构体变量 
+
+int main() {
+	struct stu s1;//s 是局部变量
+	syy s2;
+	return 0;
+}
