@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<string.h>
+int main() {
+	char arr1[] = "#############";
+	char arr2[] = "bit";
+	strcpy_s(arr1, arr2);
+
+	printf("%s\n", arr2);//打印bit (为什么打印bit      因为有"\0"    )
+
+	return 0;
+}
