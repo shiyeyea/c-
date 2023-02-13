@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+#include<assert.h>
+char* MY_strcpy_s(char* dest,const char* src)
+{
+	char* ret = dest;
+	assert(dest != NULL);//断言
+	assert(src != NULL);//断言
+	//把src指向的字符穿拷贝到dest指向的空间，包含'\0'字符
+	while ( *dest ++  =  *src ++) 
+	{
+		;
+	}
+	return ret;
+}
+int main() {
+	char arr1[] = "#############";
+	char arr2[] = "bit";
+	MY_strcpy_s(arr1, arr2);
+
+	printf("%s\n", MY_strcpy_s(arr1,arr2));//打印bit (为什么打印bit      因为有"\0"    )
+	//一个字符串的结尾为\0
+
+	return 0;
+}
+
+const 放在指针变量的*左边时，修饰的是p,也就是说: 不能通过p来改变*p(num)的值
+              const 放在指针变量的*右边时，修饰的是指针变量p本身,p不能被改变了
