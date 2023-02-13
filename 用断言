@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<assert.h>
-void MY_strcpy_s(char* dest, char* src)
+void MY_strcpy_s(char* dest,const char* src)
 {
 	assert(dest != NULL);//断言
 	assert(src != NULL);//断言
