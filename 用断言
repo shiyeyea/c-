@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+#include<assert.h>
+void MY_strcpy_s(char* dest, char* src)
+{
+	assert(dest != NULL);//断言
+	assert(src != NULL);//断言
+	while ( *dest ++  =  *src ++) 
+	{
+		;
+	}
+}
+int main() {
+	char arr1[] = "#############";
+	char arr2[] = "bit";
+	MY_strcpy_s(arr1, NULL);
+
+	printf("%s\n", arr2);//打印bit (为什么打印bit      因为有"\0"    )
+	//一个字符串的结尾为\0
+
+	return 0;
+}
