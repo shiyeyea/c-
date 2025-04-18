@@ -62,7 +62,7 @@ int main() {
 	for (int i = 0; i < NUM; i++) {
 		settextcolor(RGB(rand() % 256, rand() % 256, rand() % 256));//修改颜色
 		Sleep(100);
-		outtextxy(arr[i].x, arr[i].y, L"lw我爱你");
+		outtextxy(arr[i].x, arr[i].y, L"");
 	}
 
 	IMAGE mv;
