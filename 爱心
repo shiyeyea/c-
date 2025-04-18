@@ -5,7 +5,7 @@ int main()
 {
 	float x,y,a;
 	system(" color 0c");//设计程序颜色 
-	printf("遇见你是一件很开心的事情,爱你哟！！！\n");//打印文字 
+	printf("1\n");//打印文字 
 	for(y=1.5f;y>-1;y-=0.1f)
 	{
 		for(x=-1.5f;x<1.5f;x+=.05f){
